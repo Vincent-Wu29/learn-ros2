@@ -1,0 +1,39 @@
+# --- ROS 2 标准忽略规则 ---
+
+# 编译生成的目录 (Colcon 默认输出)
+build/
+install/
+log/
+
+# 如果使用了 overlay 工作空间，这些通常也需要忽略
+*.egg-info/
+dist/
+
+# --- 操作系统产生的临时文件 ---
+.DS_Store          # macOS
+Thumbs.db          # Windows
+desktop.ini        # Windows
+
+# --- 编辑器产生的临时文件 ---
+.vscode/           # VS Code 的配置 (通常建议保留 settings.json，忽略其他)
+*.swp              # Vim
+*.swo
+*~                 # 临时文件
+
+# --- Python 相关文件 ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# --- C++ 编译临时文件 ---
+*.o
+*.a
+*.so
+*.la
+.vscode/browse.vc.db
+.vscode/browse.vc.db-shm
+.vscode/browse.vc.db-wal
